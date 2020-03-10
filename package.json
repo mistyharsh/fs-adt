@@ -9,7 +9,8 @@
   "scripts": {
     "build:lib": "babel src -x .ts -d dist",
     "build:types": "tsc -p tsconfig.json",
-    "build": "npm run build:types && npm run build:lib && cp package.json ./dist/package.json"
+    "build:copy": "cp package.json ./dist && cp LICENSE ./dist",
+    "build": "npm run build:types && npm run build:lib && npm run build:copy"
   },
 
   "repository": {
@@ -17,7 +18,7 @@
     "url": "git+https://github.com/mistyharsh/fs-adt.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "SEE LICENSE IN LICENSE",
   "bugs": {
     "url": "https://github.com/mistyharsh/fs-adt/issues"
   },
@@ -39,5 +40,7 @@
     "@types/fs-extra": "^8.1.0",
     "@types/hapi__joi": "^16.0.12",
     "fs-extra": "^8.1.0"
-  }
+  },
+
+  "keywords": ["fs", "fs-extra", "file", "adt", "file system", "json"]
 }
