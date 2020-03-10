@@ -1,6 +1,6 @@
 {
   "name": "fs-adt",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "fs-extra exposed as TypeScript ADT",
 
   "main": "index.js",
@@ -9,7 +9,7 @@
   "scripts": {
     "build:lib": "babel src -x .ts -d dist",
     "build:types": "tsc -p tsconfig.json",
-    "build:copy": "cp package.json ./dist && cp LICENSE ./dist",
+    "build:copy": "cp package.json LICENSE README.md ./dist",
     "build": "npm run build:types && npm run build:lib && npm run build:copy"
   },
 
@@ -18,7 +18,7 @@
     "url": "git+https://github.com/mistyharsh/fs-adt.git"
   },
   "author": "",
-  "license": "SEE LICENSE IN LICENSE",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/mistyharsh/fs-adt/issues"
   },
