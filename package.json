@@ -2,12 +2,16 @@
   "name": "fs-adt",
   "version": "0.1.0",
   "description": "fs-extra exposed as TypeScript ADT",
+
   "main": "index.js",
+  "types": "index.d.ts",
+
   "scripts": {
+    "build:lib": "babel src -x .ts -d dist",
     "build:types": "tsc -p tsconfig.json",
-    "build": "babel src -x .ts -d dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run build:types && npm run build:lib && cp package.json ./dist/package.json"
   },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mistyharsh/fs-adt.git"
@@ -18,6 +22,7 @@
     "url": "https://github.com/mistyharsh/fs-adt/issues"
   },
   "homepage": "https://github.com/mistyharsh/fs-adt#readme",
+
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.7",
@@ -28,6 +33,7 @@
     "jest": "^25.1.0",
     "typescript": "^3.8.3"
   },
+
   "dependencies": {
     "@hapi/joi": "^17.1.0",
     "@types/fs-extra": "^8.1.0",
